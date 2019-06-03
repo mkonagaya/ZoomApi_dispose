@@ -24,3 +24,21 @@
 
 ## 公式
 [公式API](https://marketplace.zoom.us/docs/guides/about-marketplace/zoom-developer-tools)
+
+## JWT インストール
+
+```  composer require tymon/jwt-auth v1.0.0-rc.4 ```
+
+## Paizaはcurlできない
+
+なのでまた自宅で。
+
+https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/accounts
+
+https://marketplace.zoom.us/docs/guides/authorization/jwt/generating-jwt
+
+https://qiita.com/zaburo/items/176f907ea46767283785
+
+http://kzkohashi.hatenablog.com/entry/2018/03/25/225343
+
+https://qiita.com/nunulk/items/42ca709a91fddcba6e61
