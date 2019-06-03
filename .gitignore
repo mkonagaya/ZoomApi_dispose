@@ -39,3 +39,4 @@ public_html
 .editorconfig
 .composer/
 .mysql_history
+.c9/

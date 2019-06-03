@@ -18,7 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => 'guest:api'], function(){
-    Route::post('/login', 'ApiController@login');
+    // いずれPOSTにするよ。
+    Route::get('/login', 'ApiController@login');
 });
 
 Route::group(['middleware' => 'auth:api'], function(){

@@ -42,3 +42,9 @@ https://qiita.com/zaburo/items/176f907ea46767283785
 http://kzkohashi.hatenablog.com/entry/2018/03/25/225343
 
 https://qiita.com/nunulk/items/42ca709a91fddcba6e61
+
+## AWSでやるか…
+
+https://qiita.com/kidatti/items/2d6a4a24f89dc71eb66e
+
+http://kota20.com/page-945/#PHPMySQL
