@@ -48,3 +48,15 @@ https://qiita.com/nunulk/items/42ca709a91fddcba6e61
 https://qiita.com/kidatti/items/2d6a4a24f89dc71eb66e
 
 http://kota20.com/page-945/#PHPMySQL
+
+
+## PHP.ini
+https://qiita.com/matsushou/items/7e48edf3c6cd3bc302d2
+
+``` php -r "echo phpinfo();" | grep "php.ini" ``` 
+
+でファイルの場所を確認し、
+
+``` extension=php_pdo_mysql.so ```
+
+を追加。

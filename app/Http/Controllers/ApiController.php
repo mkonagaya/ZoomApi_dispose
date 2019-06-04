@@ -9,14 +9,13 @@ class ApiController extends Controller
     //id,pwで認証してtokenを発行
     function login(){
 
-        $credentials = request(['api_key', 'password']);
-        dd($credentials);
-        $credentials = ['iss' => 'SJTZrQuZR_Ctc57N-FcNGw'];
+        // $credentials = request(['api_key', 'password']);
         
-        // payload = { 
-        //         iss: 'api_key', #api_key
-        //         exp: Time.now.to_i + 4 * 3600
-        //     };
+        $credentials = [
+            'iss' => 'SJTZrQuZR_Ctc57N-FcNGw',
+            'exp' => strtotime('+1 week') ,
+        ];
+        
         
         /*
         API Key
@@ -29,7 +28,7 @@ class ApiController extends Controller
         eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJWU20ya1hsRFJNT0VDUllpYTJjVnpRIn0.tZA8CGjJFKks461Owr0_TILIvvtT35VWicWy6eOAS1w
         
         JWT Token
-        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IlNKVFpyUXVaUl9DdGM1N04tRmNOR3ciLCJleHAiOjE1NjAxMjgwNTcsImlhdCI6MTU1OTUyMzI1NX0.N9IUJ42mBEPuXIC_4YW5OlhhXK3AJ19EhtxS-XLcDJM
+        eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IlNKVFpyUXVaUl9DdGM1N04tRmNOR3ciLCJleHAiOjE1NjAyNDE1NjgsImlhdCI6MTU1OTYzNjc2N30.RPbS-dHs26avtVoO8C4kRxp9oDp2Fy1JlBwY1nx5c34
         
         
         
@@ -41,11 +40,14 @@ class ApiController extends Controller
         
         */
         
+        // getJWTIdentifier
 
         //もし認証エラーなら
-        if(!$token = auth('api')->attempt($credentials)){
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
+        // if(!$token = auth('api')->attempt($credentials)){
+        //     return response()->json(['error' => 'Unauthorized'], 401);
+        // }
+        
+        $token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IlNKVFpyUXVaUl9DdGM1N04tRmNOR3ciLCJleHAiOjE1NjAyNDE1NjgsImlhdCI6MTU1OTYzNjc2N30.RPbS-dHs26avtVoO8C4kRxp9oDp2Fy1JlBwY1nx5c34';
 
         //OKならtoken発行
         return $this->respondWithToken($token);
